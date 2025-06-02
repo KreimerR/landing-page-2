@@ -37,6 +37,10 @@ header > ul a:hover {
   gap: 20px;
 }
 
+.search-icon:hover {
+  cursor: pointer;
+}
+
 .login {
   border: none;
   color: #000000;
