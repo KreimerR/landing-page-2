@@ -1,0 +1,223 @@
+@import "__resets";
+@import "__mediaqueries";
+
+header {
+    width: 100vw;
+    height: 124px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 35px;
+
+    &>ul {
+        list-style: none;
+        display: flex;
+        gap: 29px;
+
+        a {
+            color: #09183f;
+            font-size: 14px;
+            text-decoration: none;
+
+            &:hover {
+                color: lighten(#09183f, 20%);
+            }
+        }
+    }
+}
+
+.right-elements-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.login {
+    border: none;
+    color: #000000;
+    font-size: 14px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.signup {
+    width: 115px;
+    height: 42px;
+    border: none;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #FF748D, #FF8E4F);
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/main-background.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+
+.central-container {
+    background-color: rgb(9, 24, 63, 50%);
+    text-align: center;
+    width: 645px;
+    height: 319px;
+    padding: 57px 63px;
+
+    &>h1 {
+        color: #FFFFFF;
+        font-size: 40px;
+        margin-bottom: 24px;
+    }
+
+    &>p {
+        color: #FFFFFF;
+        font-size: 18px;
+        margin-bottom: 37px;
+    }
+
+    &>button {
+        width: 136px;
+        height: 42px;
+        border: none;
+        border-radius: 50px;
+        background-image: linear-gradient(to right, #FF748D, #FF8E4F);
+        color: #FFFFFF;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
+
+section {
+    background-color: #F4F8FD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding-top: 111px;
+    padding-bottom: 25px;
+}
+
+.collection-container {
+    width: 501px;
+    height: 665px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+
+    &>img {
+        width: 501px;
+        height: 325px;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+.info-container {
+    background-color: #FFFFFF;
+    padding: 51px 61px;
+    text-align: center;
+
+    &>h1 {
+        color: #000000;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    &>p {
+        color: #000000;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    &>button {
+        width: 183px;
+        height: 42px;
+        border: solid 1px #09183F;
+        border-radius: 50px;
+        background-color: transparent;
+        color: #09183F;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
+
+@include mobile {
+    .menu-button {
+        display: block;
+        width: 60px;
+        height: 42px;
+        border: none;
+        border-radius: 50px;
+        background-color: rgb(23, 23, 23);
+        color: #FFFFFF;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    header {
+        &>ul {
+            display: none;
+        }
+    }
+
+    .right-elements-container {
+        &>img {
+            display: none;
+        }
+    }
+
+    .menu {
+        display: block;
+        text-align: center;
+
+        &>li {
+            border-bottom: solid 1px rgb(23, 23, 23);
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            &>a {
+                text-decoration: none;
+                color: rgb(23, 23, 23);
+            }
+
+            &:hover {
+                background-color: rgb(243, 243, 243);
+            }
+
+            &:first-child {
+                border-top: solid 1px rgb(23, 23, 23);
+            }
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .central-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 319px;
+        padding: 10px 20px;
+    }
+}
